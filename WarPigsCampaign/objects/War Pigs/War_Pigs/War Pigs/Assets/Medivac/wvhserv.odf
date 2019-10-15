@@ -1,0 +1,134 @@
+[GameObjectClass]
+baseName = "ivhserv"
+classLabel = "serviceH"
+geometryName = "wvapc00.fbx"
+cockpitName = "ivcons_cockpit.fbx"  //"ivserv_cockpit.fbx"
+scrapValue = 20
+scrapCost = 50
+buildTime = 10.0
+maxHealth = 2000
+maxAmmo = 1200
+unitName = "Medivac"
+aiName = "ServiceHProcess"
+aiName2 = "ServiceHProcess"
+heatSignature = 0.1
+imageSignature = 1.0
+radarSignature = 0.0
+isAssault = 0
+collisionRadius = 1.0
+armorClass = L
+
+/////// REQUIREMENTS ///////////////
+requireCount = 1
+requireName1 = "wbsbay"
+requireText1 = "Build Service Bay"
+
+/////// PROVIDES ///////////////////
+provideCount = 2
+provideName1 = "wvhserv"
+provideName2 = "VIRTUAL_CLASS_SERVICETRUCK"
+
+/////////LIGHTS AND EFFECTS//////////////////
+lightHard1 = "hp_light_1"
+lightName1 = "spotblue2"
+
+[CraftClass]
+rangeScan = 300.0
+periodScan = 5.0
+engageRange = 30
+braccelFactor = 0.09
+velFactor = 0.3
+steerFactor = 1.0
+omegaFactor = 0.2
+strafeFactor = 0.1
+TeamTransferrable = true
+GotoTaskHasLeader = false // if true, gotos will be done in a leader/follower model
+
+selectAttackMsg = "ivserv04.wav"
+selectGoMsg = "ivserv02.wav"
+selectFollowMsg = "ivserv03.wav"
+selectUser2Msg = "ivserv13.wav"	
+selectOtherMsg = "ivserv04.wav"
+goMsg = "ivserv02.wav"
+goObjectMsg = "ivserv11.wav"
+attackMsg = "ivserv01.wav"
+followMeMsg = "ivserv08.wav"
+followMsg = "ivserv03.wav"
+repairMsg = "ivserv09.wav"
+reloadMsg = "ivserv09.wav"
+rescueMsg = "ivserv11.wav"
+recycleMsg = "ivserv11.wav"
+holdMsg = "ivserv12.wav"
+user1Msg = "ivserv01.wav"
+otherMsg = "ivserv14.wav"
+killedMsg = ""
+diedMsg = ""
+
+[HoverCraftClass]
+velocForward = 28.5 // 
+velocReverse = 20.0 // 
+velocStrafe = 16.0 // 
+accelThrust = 24.0 //acceleration 
+accelDragStop = 6.0 //how fast it stops once hands are off controls 
+accelJump = 15.0 // 
+setAltitude = 10.0 // how high off the ground
+alphaTrack = 21.0 //springs speed it rights itself 
+alphaDamp = 8.0 //shocks 
+pitchPitch = 0.25 //nose up 
+pitchThrust = 0.1 //nose down 
+rollStrafe = 0.08 //rolls while strafing 
+omegaSpin = 6.0 //spinning in place speed 
+omegaTurn = 2.3 //turning while moving speed 
+alphaSteer = 7.0 //how fast it responds to steering 
+rollSteer = 0.08 //rolls while steering 
+
+soundThrust = "itank01e.wav"
+soundTurbo = "avtanke3.wav"
+
+[ServiceTruckH]
+supplyRange = 20.0f
+supplyRadius = 25.0f
+supplyRate = 40.0f
+supplySound = "mnu_empt.wav"
+supplyEffect = "ivhserv.supply"
+supplyHard = "hp_mortar_1"
+// Individual classification tweakers
+
+serviceSTs = 1
+serviceCraft = 1
+serviceBuildings = 1
+servicePilots = 0
+serviceOther = 1
+objPush = 0.0f // Used while servicing. Factor based on distance from truck to target
+objDrag = 0.0f // Used while servicing. Factor based on target's velocity
+
+[Supply]
+renderBase = "draw_multi"
+renderCount = 2
+renderName1 = "ivhserv.halo"
+renderName2 = "ivhserv.bolt"
+
+[Halo]
+renderBase = "draw_twirl"
+textureName = "particle.tga"
+textureBlend = "one one modulate"
+startColor = "127 255 0 127"
+finishColor = "0 255 0 0"
+startRadius = 5.0
+finishRadius = 1.0
+animateTime = 0.3
+BottomInteractsWithTerrain = false
+
+[Bolt]
+renderBase = "draw_bolt"
+textureName = "trail2.tga"
+textureBlend = "one one modulate"
+startColor = "127 255 0 63"
+finishColor = "0 255 0 0"
+startRadius = 1.0
+finishRadius = 0.3
+segmentLength = 2.0
+segmentVariance = "0.5 0.5 0.5"
+animateTime = 0.3
+textureRate = 0.05
+textureSpeed = -0.5

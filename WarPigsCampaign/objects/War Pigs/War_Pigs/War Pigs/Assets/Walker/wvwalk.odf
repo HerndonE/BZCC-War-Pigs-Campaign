@@ -1,0 +1,29 @@
+[GameObjectClass]
+classLabel = "ivwalk"
+cockpitName = "wvwalk_cockpit.fbx"
+geometryName = "wvwalk_skel.fbx"
+animCount = 10
+animName1 = "idle"
+animFile1 = "wvwalk_idle.xsi"
+animName2 = "idle2"
+animFile2 = "wvwalk_idle.xsi"
+animName3 = "idle3"
+animFile3 = "wvwalk_idle.xsi"
+animName4 = "sitdown"
+animFile4 = "wvwalk_sitdown.xsi"
+animName5 = "walk"
+animFile5 = "wvwalk_walk.xsi"
+animName6 = "turn"
+animFile6 = "wvwalk_turn.xsi"
+animName7 = "death"
+animFile7 = "wvwalk_death.xsi"
+animName8 = "death2"
+animFile8 = "wvwalk_death2.xsi"
+animName9 = "death3"
+animFile9 = "wvwalk_death3.xsi"
+animName10 = "run"
+animFile10 = "wvwalk_walk.xsi"
+
+[CraftClass]
+
+[WalkerClass]

@@ -1,0 +1,10 @@
+[GameObjectClass]
+classLabel = "ivrckt"
+geometryName = "wvrckt00.fbx"
+cockpitName = "wvrckt_cockpit.fbx"
+
+[CraftClass]
+
+[TrackedVehicleClass]
+
+[AssaultTankClass]

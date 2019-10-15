@@ -1,0 +1,15 @@
+[GameObjectClass]
+classLabel = "wbgtow"
+
+unitName = "Gun Tower LT"
+scrapCost = 45
+
+weaponName1 = "gchain_c"
+
+weaponName2 = "gatstab_c"
+
+[BuildingClass]
+
+[CraftClass]
+
+[TurretCraftClass]

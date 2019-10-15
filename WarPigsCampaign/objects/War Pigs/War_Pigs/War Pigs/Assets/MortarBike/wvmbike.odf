@@ -1,0 +1,15 @@
+[GameObjectClass]
+classLabel = "ivmbike"
+geometryName = "wvmbik00.fbx"
+cockpitName = "wvmbik_cockpit.fbx"
+animCount = 3
+animName1 = "forward"
+animFile1 = "wvmbiksf.fbx"
+animName2 = "neutral"
+animFile2 = "wvmbiksn.fbx"
+animName3 = "reverse"
+animFile3 = "wvmbiksr.fbx"
+
+[CraftClass]
+
+[HoverCraftClass]

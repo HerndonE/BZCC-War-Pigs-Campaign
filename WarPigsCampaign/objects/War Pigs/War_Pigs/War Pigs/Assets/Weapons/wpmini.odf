@@ -1,0 +1,12 @@
+[GameObjectClass]
+baseName = "wpmini"
+classLabel = "apgun"
+
+scrapCost = 10
+
+unitName = "Railgun"
+
+[PowerUpClass]
+
+[WeaponPowerupClass]
+weaponName = "gwminigun_a"

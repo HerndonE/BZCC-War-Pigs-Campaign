@@ -1,0 +1,19 @@
+[OrderPanel]
+
+[BettyVoice]
+EVENT_SOUND_1 = "abetty1.wav"		// lost a generic unit
+EVENT_SOUND_2 = "abetty2.wav"		// lost a defensive unit
+EVENT_SOUND_3 = "abetty3.wav"		// lost an offensive unit
+EVENT_SOUND_4 = "abetty4.wav"		// lost a scavenger
+EVENT_SOUND_5 = "abetty5.wav"		// a unit is out of ammo
+EVENT_SOUND_6 = "abetty6.wav"		// base is under attack
+EVENT_SOUND_7 = "abetty7.wav"		// user vehicle is out of ammo
+EVENT_SOUND_8 = "abetty8.wav"		// a unit is low on health
+EVENT_SOUND_9 = "abetty9.wav"		// user vehicle is low on health
+EVENT_SOUND_10 = "abetty10.wav"	// satellite view activated
+EVENT_SOUND_11 = "abetty11.wav"	// no free power
+EVENT_SOUND_12 = "abetty12.wav"	// lost a power plant
+EVENT_SOUND_13 = "abetty13.wav"	// satellite view enabled
+EVENT_SOUND_14 = "abetty14.wav"	// lost a generic building
+EVENT_SOUND_15 = "silence.wav"  // satellite view deactivated
+EVENT_SOUND_16 = "silence.wav"  // satellite view disabled
