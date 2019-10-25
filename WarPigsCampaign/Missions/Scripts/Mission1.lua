@@ -1,12 +1,16 @@
 --------------------------------------------------------------------------
 -- Warpigs Mission 1 Script (In the Shadows)
 -- Author(s): JJ173 (AI_Unit), Gravey, Nielk1, Ded10c, F9Bomber, Ken
--- Date of last update: 28/05/2019
+-- Date of last update: 25/10/2019
 --------------------------------------------------------------------------
 
 local _objective1 = "[In the Shadows]";
 local _objective2 = "\n- Escort the Scientist Transport to the Missile Site";
 local _objective3 = "\n - Defend the Scientist Transport";
+
+local TaylorDied = "Taylor has deceased. Mission Failed.";
+local SvetozarDied = "Svetozar has deceased. Mission Failed.";
+local MicahelDied = "Micahel has deceased. Mission Failed.";
 
 local DEBUG = true;
 
@@ -18,6 +22,7 @@ local Mission = {
 	TurnCounter = 0,
 	DropshipClearCounter = 0,
 	FirstScoutCounter = 0,
+	Difficulty = 0,
 
 	-- Handles
 	Player,
@@ -42,6 +47,7 @@ local Mission = {
 	FWave2, 
 	FWave3,
 
+	TempShip,
 
 	-- Other
 	talk = 0,
@@ -75,16 +81,50 @@ function AddObject(h)
 	if (GetCfg(h) == "wspilo_sp") then
 		if (not IsAround(Mission.Taylor)) then
 			Mission.Taylor = h;
+			SetObjectiveName(h, "Taylor Green");
+			SetLabel(h, "taylor");
 		elseif (not IsAround(Mission.Svetozar)) then
 			Mission.Svetozar = h;
+			SetObjectiveName(h, "Svetozar Andropov");
+			SetLabel(h, "svetozar");
 		elseif (not IsAround(Mission.Michael)) then
 			Mission.Michael = h;
+			SetObjectiveName(h, "Michael Grant");
+			SetLabel(h, "michael");
 		end
+
+		SetGroup(h, 9);
 	end
 end
 
 function DeleteObject(h)
+	local label = GetLabel(h);
 
+	-- Re-assign the variable to a ship that this pilot has got in.
+	if (GetCfg(h) == "wspilo_sp") then
+		if (h == Mission.Taylor) then
+			if (label == GetLabel(Mission.TempShip)) then
+				Mission.Taylor = Mission.TempShip;
+				SetObjectiveName(Mission.TempShip, "Taylor Green");
+
+				Mission.TempShip = nil;
+			end
+		elseif (h == Mission.Svetozar) then
+			if (label == GetLabel(Mission.TempShip)) then
+				Mission.Svetozar = Mission.TempShip;
+				SetObjectiveName(Mission.Svetozar, "Svetozar Andropov");
+
+				Mission.TempShip = nil;
+			end
+		elseif (h == Mission.Micahel) then
+			if (label == GetLabel(Mission.TempShip)) then
+				Mission.Micahel = Mission.TempShip;
+				SetObjectiveName(Mission.Micahel, "Michael Grant");
+
+				Mission.TempShip = nil;
+			end
+		end
+	end
 end
 
 function ObjectKilled(deadObject)
@@ -92,18 +132,27 @@ function ObjectKilled(deadObject)
 	if (deadObject == Mission.Taylor) then
 		if (GetCfg(deadObject) == "wspilo_sp") then
 			Mission.TaylorDead = true;
+
+			ClearObjectives();
+			AddObjective(TaylorDied, "RED");
 		else
 			EjectPilot(Mission.Taylor);
 		end
 	elseif (deadObject == Mission.Svetozar) then
 		if (GetCfg(deadObject) == "wspilo_sp") then
 			Mission.SvetozarDead = true;
+
+			ClearObjectives();
+			AddObjective(SvetozarDied, "RED");
 		else
 			EjectPilot(Mission.Svetozar);
 		end
 	elseif (deadObject == Mission.Michael) then
 		if (GetCfg(deadObject) == "wspilo_sp") then
 			Mission.MicahelDead = true;
+
+			ClearObjectives();
+			AddObjective(MicahelDied, "RED");
 		else
 			EjectPilot(Mission.Michael);
 		end
@@ -114,18 +163,19 @@ function PreGetIn(curWorld, pilotHandle, emptyCraftHandle)
 	-- Need handling here to ensure that the mission doesn't think that our special pilots die if they get in a craft.
 	if (GetCfg(pilotHandle) == "wspilo_sp") then
 		if (pilotHandle == Mission.Taylor) then
-			Mission.Taylor = emptyCraftHandle;
-			SetObjectiveName(Mission.Taylor, "Taylor Green");
+			Mission.TempShip = emptyCraftHandle;
+			SetLabel(Mission.TempShip, "taylor");
 		elseif (pilotHandle == Mission.Svetozar) then
-			Mission.Svetozar = emptyCraftHandle;
-			SetObjectiveName(Mission.Svetozar, "Svetozar Andropov");
+			Mission.TempShip = emptyCraftHandle;
+			SetLabel(Mission.TempShip, "svetozar");
 		elseif (pilotHandle == Mission.Michael) then
-			Mission.Michael = emptyCraftHandle;
-			SetObjectiveName(Mission.Michael, "Michael Grant")
+			Mission.TempShip = emptyCraftHandle;
+			SetLabel(Mission.TempShip, "michael");
 		end
 	end
-end
 
+	return 1;
+end
 
 function InitialSetup()
 	Mission.TPS = EnableHighTPS();
@@ -147,6 +197,9 @@ function Start()
 	SetColorFade(1, 1, Make_RGB(0, 0, 0));
 
 	SetAutoGroupUnits(false);
+
+	-- Set the mission difficulty based on the players options.
+	Mission.Difficulty = GetVarItemInt("options.play.difficulty");
 
 	-- Get the player initially.
 	Mission.Player = GetPlayerHandle(1);
@@ -177,6 +230,11 @@ function Start()
 	SetPilotClass(Mission.Michael, "wspilo_sp");
 	SetPilotClass(Mission.Svetozar, "wspilo_sp");
 	SetPilotClass(Mission.Taylor, "wspilo_sp");
+
+	-- Ensure our characters always eject
+	SetEjectRatio(Mission.Michael, 1)
+	SetEjectRatio(Mission.Svetozar, 1)
+	SetEjectRatio(Mission.Taylor, 1)
 
 	-- Get all ships to look at Jason at the start.
 	LookAt(Mission.Michael, Mission.Player, 1);
@@ -215,7 +273,7 @@ function Update()
 	end
 
 	if (DEBUG) then
-		print(Mission.State);
+		--print(Mission.State);
 		--Mission.State = 10;
 	end
 
@@ -271,10 +329,6 @@ function MainCode()
 			Mission.State = Mission.State + 1;
 		elseif (Mission.State == 5) then
 			if (GetDistance(Mission.Transport, "scout_trigger") <= 75.0) then
-				if (DEBUG) then
-					print("Moving scouts to scan structures...");
-				end
-
 				Goto(Mission.IScout1, "scout_1_path", 1);
 				Goto(Mission.FScout1, "scout_2_path", 1);
 
