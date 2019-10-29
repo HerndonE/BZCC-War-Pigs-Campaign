@@ -1,0 +1,31 @@
+[GameObjectClass]
+classLabel = "ivrecy"
+geometryName = "wvrecy00.fbx"
+animCount = 1
+animName1 = "deploy"
+animFile1 = "wvrecy00.fbx"
+
+/////// PROVIDES ///////////////////
+
+provideCount = 5
+provideName3 = "wvrecy_mb"
+provideName4 = "VIRTUAL_CLASS_RECYCLER"
+provideName5 = "VIRTUAL_CLASS_RECYCLERVEHICLE"
+
+////////////////////////////////////
+
+[CraftClass]
+
+[TrackedVehicleClass]
+
+[TrackedDeployableClass]
+
+[DeployBuildingClass]
+deployName = "wbrecy_mb"
+BeamColor = "177 0 0 31"
+BuildSparkConfig = "sparker_WarPigs"
+LineFinishColor = "255 255 255 0"
+LineStartColor = "177 0 0 255"
+lineSolidColor = "177 0 0 255"
+
+[RecyclerVehicleClass]

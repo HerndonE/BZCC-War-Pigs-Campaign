@@ -1,0 +1,10 @@
+[GameObjectClass]
+classLabel = "ivatank"
+geometryName = "wvatnk00.fbx"
+cockpitName = "wvatnk_cockpit.fbx"
+explosionName = "wWPHWxpl"
+[CraftClass]
+
+[TrackedVehicleClass]
+
+[AssaultTankClass]

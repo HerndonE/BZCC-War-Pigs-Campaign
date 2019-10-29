@@ -1,0 +1,38 @@
+[Sparker_WarPigs]
+simulateBase = "sim_smoke"
+renderBase = "draw_multi"
+renderCount = 2
+renderName1 = "sparker_WarPigs.smoke"
+renderName2 = "sparker_WarPigs.trail"
+
+[smoke]
+renderBase = "draw_emit"
+emitName = "sparker_warpigs.spark_WP"
+emitDelay = 0.05
+emitVelocity = "0.0 1.0 0.0"
+emitVariance = "2.0 0.0 2.0"
+emitPosVariance = "1.5 1.5 1.5"
+
+[trail]
+renderBase = "draw_emit"
+emitName = "sparker_warpigs.spark_WP"
+emitDelay = 0.05
+
+//emitVelocity = "2.0 3.0 1.0"
+emitVelocity = "6.0 6.0 4.0"
+
+//emitVarience = "1.5 2.0 0.5"
+emitVariance = "11.5 12.0 11.5"
+
+[Spark_WP]
+simulateBase = "sim_smoke"
+lifeTime = 4.0
+renderBase = "draw_twirl"
+textureName = "flame.tga"
+textureBlend = "one one modulate"
+startColor = "177 0 0 31"
+finishColor = "177 0 0 0"
+startRadius = 2.0
+finishRadius = 0.1
+animateTime = 4.0
+rotationRate = 5.0

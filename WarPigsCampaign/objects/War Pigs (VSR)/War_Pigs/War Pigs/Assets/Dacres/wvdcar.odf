@@ -1,0 +1,123 @@
+[GameObjectClass]
+baseName = "wvdcar"
+classLabel = "wingman"
+geometryName = "wvapc00.fbx"
+scrapValue = 20
+scrapCost = 100
+buildTime = 10.0
+maxHealth = 2000
+maxAmmo = 14000
+addAmmo = 50
+unitName = "Dacres"
+aiName = "TankFriend"
+aiName2 = "TankEnemy"
+heatSignature = 0.1
+imageSignature = 1.0
+radarSignature = 0.0
+isAssault = 1
+collisionRadius = 1.0
+armorClass = H
+explosionName = "wWPHWxpl2"
+
+/////// REQUIREMENTS ///////////////
+requireCount = 2
+requireName1 = "wbarmo"
+requireText1 = "Build Armory"
+requireName2 = "wbtcen"
+requireText2 = "Build Tech Center"
+
+/////// PROVIDES ///////////////////
+provideCount = 2
+provideName1 = "wvdcar"
+provideName2 = "VIRTUAL_CLASS_APC"
+
+/////// Weapons ///////////////////
+weaponMask = 00001
+weaponHard1 = "HP_GUN_1"
+weaponAssault1 = 0
+weaponName1 = "wvdscout"
+
+[PowerUpClass]
+
+[WeaponPowerupClass]
+weaponName = "wvdscout"
+
+
+[CraftClass]
+rangeScan = 600.0
+periodScan = 2.0
+velocJam = 2.0
+engageRange = 450
+braccelFactor = 0.03
+velFactor = 0.2
+steerFactor = 1.5
+omegaFactor = 0.2
+strafeFactor = 0.2
+TeamTransferrable = true
+GotoTaskHasLeader = false // if true, gotos will be done in a leader/follower model
+
+selectWaitMsg = "ivmisl04.wav"
+selectAttackMsg = "ivmisl01.wav"
+selectFollowMsg = "ivmisl03.wav"
+selectGoMsg = "ivmisl02.wav"
+selectOtherMsg = "ivmisl04.wav"
+goMsg = "ivmisl05.wav"
+attackMsg = "ivmisl06.wav"
+followMeMsg = "ivmisl08.wav"
+followMsg = "ivmisl03.wav"
+repairMsg = "ivmisl09.wav"
+reloadMsg = "ivmisl09.wav"
+rescueMsg = "ivmisl10.wav"
+recycleMsg = "ivmisl11.wav"
+otherMsg = "ivmisl11.wav" 
+holdMsg = "ivmisl12.wav"
+user1Msg = ""  
+killedMsg = "ivmisl07.wav"
+diedMsg = ""
+
+[HoverCraftClass]
+setAltitude = 30.0
+accelDragStop = 5.0
+alphaTrack = 20.0
+alphaDamp = 10.0
+pitchPitch = 0.10
+pitchThrust = 0.1
+rollStrafe = 0.0
+rollSteer = 0.0
+velocForward = 30.0
+velocReverse = 20.0
+velocStrafe = 20.0
+accelThrust = 50.0
+omegaSpin = 2.0
+omegaTurn = 1.0
+alphaSteer = 5.0
+accelJump = 90.0
+
+soundThrust = "itank01e.wav"
+soundTurbo = "avtanke3.wav"
+
+
+[Halo]
+renderBase = "draw_twirl"
+textureName = "particle.tga"
+textureBlend = "one one modulate"
+startColor = "127 255 0 127"
+finishColor = "0 255 0 0"
+startRadius = 5.0
+finishRadius = 1.0
+animateTime = 0.3
+BottomInteractsWithTerrain = false
+
+[Bolt]
+renderBase = "draw_bolt"
+textureName = "trail2.tga"
+textureBlend = "one one modulate"
+startColor = "127 255 0 63"
+finishColor = "0 255 0 0"
+startRadius = 1.0
+finishRadius = 0.3
+segmentLength = 2.0
+segmentVariance = "0.5 0.5 0.5"
+animateTime = 0.3
+textureRate = 0.05
+textureSpeed = -0.5

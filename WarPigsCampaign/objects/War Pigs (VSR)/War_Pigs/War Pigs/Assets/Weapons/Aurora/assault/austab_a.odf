@@ -1,0 +1,91 @@
+[OrdnanceClass]
+classLabel = "austab_c"
+
+shotSound = "lasor1.wav"
+renderName = "austab_a.render"
+xplGround = "xwpaugnd_a"
+xplVehicle = "xwpauhit_a"
+xplBuilding = "xwpauhit_a"
+
+ammoCost = 30
+lifeSpan = 2.86 // 200.6m
+
+damageValue(N) = 210 // none // 140 + 225 +/-
+damageValue(L) = 200 // light // 133 + 125 +/-
+damageValue(H) = 190 // heavy // 126 + 75 +/-
+
+damageValue(S) = 200 // standard // 133 + 125 +/-
+damageValue(D) = 190 // deflection // 126 + 255 +/-
+damageValue(A) = 210 // absorbtion // 140 + 75 +/-
+
+[PulseShellClass]
+xplPulse = "xwpauemit_a"
+
+[Render]
+renderBase = "draw_multi"
+renderCount = 5
+renderName1 = "austab_a.Light"
+renderName2 = "austab_a.glow"
+renderName3 = "austab_a.Trail"
+renderName4 = "austab_a.burst"
+renderName5 = "austab_a.Flare"
+
+[Light]
+renderBase = "draw_light"
+startColor = "230 179 25 255"
+finishColor = "230 179 25 255"
+startRadius = 25.0
+finishRadius = 25.0
+attenuateConstant = 1.0
+attenuateLinear = 0.0
+attenuateQuadratic = 15.0
+
+
+[Trail]
+renderBase = "draw_trail"
+textureName = "sonictrail.tga" // trail2
+textureBlend = "one one modulate"
+textureRate = 0.05
+startColor = "0 191 255 20"//"200 255 100 20" 
+finishColor = "0 191 255 0"//"200 255 100 0" 
+startRadius = 0.3
+finishRadius = 1.5
+segmentTime = 0.7
+animateTime = 0.3
+textureSpeed = 3.0
+
+[Flare]
+renderBase = "draw_twirl_trail"
+textureName = "sonicboom.tga"
+textureBlend = "one one modulate"
+startColor = "0 128 255 65" 
+finishColor = "255 255 255 0" 
+startRadius = 0.5
+finishRadius = 1.5
+rotationRate = 20.0
+animateTime = 0.7
+emitDelay = 0.01
+emitLife = 0.7
+
+[burst]
+renderBase = "draw_twirl_trail"
+textureName = "sonicboom.tga"
+textureBlend = "one one modulate"
+startColor = "0 191 255 140" 
+finishColor = "0 191 255 0" 
+startRadius = 0.3
+finishRadius = 3.5
+rotationRate = 1.0
+animateTime = 0.1
+emitDelay = 0.1
+emitLife = 0.1
+emitinherit = "1.0 1.0 1.0"
+
+[glow]
+renderBase = "draw_sprite"
+textureName = "particle.tga"
+textureBlend = "one one modulate"
+startColor = "230 179 25 255"
+finishColor = "230 179 25 255"
+startRadius = 2.0
+finishRadius = 2.0

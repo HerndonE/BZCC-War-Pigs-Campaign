@@ -1,0 +1,12 @@
+[GameObjectClass]
+classLabel = "ibbomb"
+geometryName = "wbbomb00.fbx"
+
+buildSupport = "A"
+
+[BuildingClass]
+
+[BomberBayClass]
+bomberType = "wvbomb"
+
+[PoweredBuildingClass]

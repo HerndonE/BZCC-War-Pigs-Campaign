@@ -1,0 +1,74 @@
+[GameObjectClass]
+mrmFactor = 0
+geometryName = "cbscav_b.xsi" //"cbhscav_b.xsi"
+animCount = 1
+animName1 = "deploy"
+animFile1 = "cbscavb_b.xsi"
+
+geometryScale = 3
+classLabel = "extractor"
+scrapCost = 0
+scrapValue = 20
+maxHealth = 6000
+maxAmmo = 0
+unitName = "Siphon"
+heatSignature = 2.0
+imageSignature = 1.0
+radarSignature = 1.0
+collisionRadius = 1.0
+isAssault = 1
+canInteract = 1 // for missile lock
+ownsTerrain = 1
+
+explosionName = "xcerbxplb"
+
+LightingType = 1
+
+armorClass = H
+
+provideCount = 2
+provideName1 = "cbhscav_b"
+provideName2 = "scup"
+
+effectHard1 = "hp_light_1"
+effectName1 = "cbhscav_B.smoke"
+effectHard2 = "hp_light_1"
+effectName2 = "cbcbun_b.dark"
+
+lightHard1 = "hp_light_1"
+lightName1 = "cpower_light2"
+
+[BuildingClass]
+// comment from GBD - What is this stuff?
+//loadAsDummy=1
+//dummyVersion=1103
+
+[ExtractorClass]
+initDelay = 12.0
+scrapDelay = 0.75
+scrapHold = 20
+detectRange = 1000
+
+[Smoke]
+simulateBase = "sim_smoke"
+lifeTime = 5e30
+renderBase = "draw_emit"
+emitName = "cbhscav_b.smokeemit"
+emitdelay = 0.1
+delayVar = 0.1
+emitVelocity = "0.0 4.0 0.0"
+emitVariance = "2.0 2.0 2.0"
+
+[SmokeEmit]
+maxDist = 2000
+simulateBase = "sim_smoke"
+lifeTime = 3
+renderBase = "draw_twirl"
+textureName = "sssmoke.tga"
+textureBlend = "srcalpha invsrcalpha modulatealpha"
+startColor = "10 10 10 100"
+finishColor = "180 180 180 0"
+startRadius =  2 //1.8
+finishRadius = 4
+animateTime = 3
+rotationrate = 1
