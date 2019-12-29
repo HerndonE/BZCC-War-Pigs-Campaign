@@ -1,7 +1,8 @@
 To load these missions you need to (in Steam)...
 1. Rick click on Battlezone: Combat Commander and select "Properties"
 2. Click "SET LAUNCH OPTIONS..."
-3. Copy the desired mission below and paste it into the empty field.
+3. Copy the desired mission for example ".bznartedit -asciisave -edit -load nameOfMap.bzn"
+below and paste it into the empty field.
 4. Click "OK" and now launch Battlezone: Combat Commander
 
 1. Mission 1
