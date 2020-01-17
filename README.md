@@ -23,3 +23,5 @@ The current mod for this is on the [Battlezone Combat Commander Steam Workshop p
 the main mod. Enjoy!
 
 Contact us here on the [Battlezone Community Discord]( https://discord.gg/zTQ9P6C) for any questions, comments, and recent developments
+
+![](https://github.com/HerndonE/BZCC-War-Pigs-Campaign/blob/master/WarPigsCampaign/Artwork/CampaignLogo/WarPigsCampaignLogo.png)
