@@ -1,0 +1,16 @@
+sky.load 'mission name'
+ Ex: sky.load isdf01
+
+sun.angle #
+
+sky.ambientcolor r# g# b#
+
+terrain.specularcolor 1024
+
+sun.color= r# g# b# a#
+
+sky.visibility # 
+                    500
+
+sky.fogrange #
+                    300  500
