@@ -1,6 +1,6 @@
 # BZCC-War-Pigs-Campaign
 
-This a is an unofficial story expansion to Battlezone II Combat Commander. The Battlezone 
+This is an unofficial story expansion to Battlezone II Combat Commander. The Battlezone 
 community has teamed up to help shed light on unexplained questions in the main campaign.
 
 The overall story is ...    
