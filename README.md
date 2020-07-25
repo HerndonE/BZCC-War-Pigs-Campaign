@@ -22,6 +22,8 @@ This campaign will give players the behind the scenes action of Battlezone Comba
 The current mod for this is on the [Battlezone Combat Commander Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=1647394926). Once the campaign is finished, this will be an addon to 
 the main mod. Enjoy!
 
-Contact us here on the [Battlezone Community Discord]( https://discord.gg/zTQ9P6C) for any questions, comments, and recent developments
+Contact us here on the [Battlezone Community Discord]( https://discord.gg/zTQ9P6C) for any questions, comments, and recent developments    
+![Discord](https://img.shields.io/discord/271066904284758027.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)
+
 
 ![](https://github.com/HerndonE/BZCC-War-Pigs-Campaign/blob/master/WarPigsCampaign/Artwork/CampaignLogo/WarPigsCampaignLogo.png)
