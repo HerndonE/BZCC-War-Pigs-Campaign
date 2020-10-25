@@ -32,7 +32,7 @@ launchMessage = "load01.wav"
 launchBackground = "dark_load.tga"
 
 [ISDF 2]
-missionTitle = "Cleaning House"
+missionTitle = "Cover Up"
 missionInfo = "isdf02.des"
 missionFile = "isdf02.bzn"
 planetName = "Pluto"
@@ -62,7 +62,7 @@ launchMessage = "load02.wav"
 launchBackground = "pluto_load.tga"
 
 [ISDF 3]
-missionTitle = "Disruption"
+missionTitle = "Cleaning House"
 missionInfo = "isdf03.des"
 missionFile = "isdf03.bzn"
 planetName = "Pluto"
@@ -93,7 +93,7 @@ launchMessage = "load03.wav"
 launchBackground = "pluto_load.tga"
 
 [ISDF 4]
-missionTitle = "Ahead of the Rest"
+missionTitle = "Disruption"
 missionInfo = "isdf04.des"
 missionFile = "isdf04.bzn"
 planetName = "Dark Planet"
@@ -171,7 +171,7 @@ launchMessage = "load05.wav"
 launchBackground = "dark_load.tga"
 
 [ISDF 6]
-missionTitle = "Protecting the Pawns"
+missionTitle = "Enemy of my Enemy"
 missionInfo = "isdf06.des"
 missionFile = "isdf06.bzn"
 planetName = "Mire"
@@ -210,7 +210,7 @@ launchMessage = "load06.wav"
 launchBackground = "mire_load.tga"
 
 [ISDF 7]
-missionTitle = "Contingency Plan"
+missionTitle = "Getting to Know Each Other"
 missionInfo = "isdf07.des"
 missionFile = "isdf07.bzn"
 planetName = "Bane"
