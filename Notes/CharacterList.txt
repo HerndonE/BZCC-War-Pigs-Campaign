@@ -1,0 +1,13 @@
+
+ War Pigs Main Character: Jason Durango
+
+ Scion Main Character:
+
+ Unit Voices:
+	1. Marauder:
+	2. Medivac:
+	3. Mini Walker:
+	4. Dropship:
+	5. Tank SCM:
+ 	6. Tank BCM:
+	
