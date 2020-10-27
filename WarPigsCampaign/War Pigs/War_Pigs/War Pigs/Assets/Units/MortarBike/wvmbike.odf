@@ -1,0 +1,21 @@
+[GameObjectClass]
+classLabel = "ivmbike"
+geometryName = "wvmbik00.fbx"
+cockpitName = "wvmbik_cockpit.fbx"
+animCount = 3
+animName1 = "forward"
+animFile1 = "wvmbiksf.fbx"
+animName2 = "neutral"
+animFile2 = "wvmbiksn.fbx"
+animName3 = "reverse"
+animFile3 = "wvmbiksr.fbx"
+explosionName = "wWPHWxpl2"
+[CraftClass]
+
+blastDist=160 // {VSR-024}
+
+[HoverCraftClass]
+
+velocForward=32.0 // *35 {VSR-026}
+setAltitude=0.8   // *1.5 {VSR-027}
+LIFT_DAMP=5.125   // {VSR-UNDOC}

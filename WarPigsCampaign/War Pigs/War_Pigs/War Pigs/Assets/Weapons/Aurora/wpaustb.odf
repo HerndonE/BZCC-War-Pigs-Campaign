@@ -1,0 +1,16 @@
+[GameObjectClass]
+baseName = "wpaustb"
+classLabel = "apcannon"
+
+scrapCost = 20
+
+unitName = "Aurora"
+
+requireCount = 1
+requireName1 = "wbfact"
+requireText1 = "Build Factory"
+
+[PowerUpClass]
+
+[WeaponPowerupClass]
+weaponName = "gaustab_c"

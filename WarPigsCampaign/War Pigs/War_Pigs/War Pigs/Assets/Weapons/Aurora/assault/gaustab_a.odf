@@ -1,0 +1,14 @@
+[WeaponClass]
+classLabel = "cannon"
+altName = "gaustab_c"
+ordName = "austab_a"
+wpnName = "Aurora"
+fireSound = "lasor1.wav"
+wpnReticle = "gblast"
+wpnCategory = "CANN"
+isAssault = 1
+aiRange = 200
+
+[CannonClass]
+shotDelay = 2.5 // 2/3sec
+shotAlternate = 0

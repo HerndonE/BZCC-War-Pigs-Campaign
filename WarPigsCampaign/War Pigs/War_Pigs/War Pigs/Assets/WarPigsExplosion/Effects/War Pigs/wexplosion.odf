@@ -1,0 +1,14 @@
+[Explosion]
+classCraft = "xcarxpl"      // Primary explosion (Hovercraft)
+classVehicle = "xvehxpl"    // Primary explosion (Treaded Tanks & Walkers)
+classTorpedo = "xpwrxpl"    // Destroyed torpdo explosion
+classPowerup = "xpwrxpl"    // Destroyed powerup explosion
+classPerson = "xprsxpl"     // Destroyed pilot explosion
+classAnimal = "xprsxpl"     // Destroyed animal explosion (For example icjak01.odf)
+classStruct = "xbldxpl"     // Not used classCollapse used instead
+classBuilding = "xbldxpl"   // Not used classCollapse used instead
+classSign = "xsgnxpl"
+classPlant = "xplnxpl"
+classChunk = "xsecxpl"      // Secondary explosion (Hovercraft, Treaded Tanks, & Walkers)
+classCrash = "xvchxpl"      // Ground collision explosion (Hovercraft, Treaded Tanks, & Walkers)
+classCollapse = "collapse"  // Builing collapse explosion

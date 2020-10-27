@@ -1,0 +1,11 @@
+[GameObjectClass]
+classLabel = "ivbomb"
+geometryName = "wvbomb00.fbx"
+explosionName = "wWPHWxpl2"
+[CraftClass]
+TeamTransferrable = true
+
+[HoverCraftClass]
+
+[BomberClass]
+

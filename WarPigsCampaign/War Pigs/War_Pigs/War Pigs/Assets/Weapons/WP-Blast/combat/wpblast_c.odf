@@ -1,0 +1,66 @@
+[OrdnanceClass]
+classLabel = "beam"
+shotGeometry = NULL
+xplGround = "xwpbgnd_c"
+xplVehicle = "xwpbcar_c"
+xplBuilding = "xwpbbld_a"
+
+renderName = "wpblast_c.render"
+
+ammoCost = 200
+lifeSpan = 170e-3 // 170m
+shotSpeed = 1e3
+
+damageValue(N) = 800 // none // 400
+damageValue(L) = 600 // light // 300
+damageValue(H) = 300 // heavy // 150
+
+damageValue(S) = 500 // standard // 250
+damageValue(D) = 800 // deflection // 400
+damageValue(A) = 300 // absorbtion // 150
+
+[Render]
+renderBase = "draw_multi"
+renderCount = 3
+renderName1 = "wpblast_c.beam"
+renderName2 = "wpblast_c.fringe"
+renderName3 = "wpblast_c.flare"
+
+[Beam]
+renderBase = "draw_bolt"
+textureName = "flametrail.tga"
+textureBlend = "one one modulate"
+startColor = "102 0 102 255"
+finishColor = "153 0 153 160"
+startRadius = 0.25
+finishRadius = 0.15
+segmentLength = 5.0
+segmentVariance = "0.0 0.0 0.0"
+animateTime = 0.65
+textureRate = 0.01
+
+[Fringe]
+renderBase = "draw_bolt"
+textureName = "flametrail.tga"
+textureBlend = "one one modulate"
+startColor = "204 0 204 255"
+finishColor = "255 0 255 0"
+startRadius = 0.5
+finishRadius = 1.0
+segmentLength = 5.0
+segmentVariance = "0.0 0.0 0.0"
+animateTime = 0.5
+textureRate = 0.01
+
+[Flare]
+renderBase = "draw_twirl_trail"
+textureName = "flame.tga"
+textureblend = "one one modulate"
+startColor = "204 0 204 255"
+finishColor = "255 0 255 20"
+startRadius = 1.2
+finishRadius = 0.7
+animateTime = 0.8
+emitDelay = 0.002
+emitVariance = "2.0 2.0 2.0"
+emitLife = 0.8

@@ -1,0 +1,14 @@
+[GameObjectClass]
+classLabel = "wspilo"
+
+scrapValue = 0
+maxHealth = 250
+
+weaponName1 = "igsnipx_c"
+weaponName2 = ""
+
+[CraftClass]
+
+[PersonClass]
+
+MicePitchSensitivity = 1.5

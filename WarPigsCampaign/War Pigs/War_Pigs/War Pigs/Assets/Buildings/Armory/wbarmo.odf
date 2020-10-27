@@ -1,0 +1,30 @@
+[GameObjectClass]
+classLabel = "ibarmo"
+geometryName = "wbarmo00.fbx"
+
+buildSupport = "A"
+
+[BuildingClass]
+
+[PoweredBuildingClass]
+
+[ArmoryClass]
+
+[ArmoryGroup1]
+buildItem1 = "wpmini"//"apmini"
+
+[ArmoryGroup2]
+buildItem1 = "wpstab"//"apstab"
+buildItem5 = "wpblst"//"apblst"
+[ArmoryGroup3]
+buildItem2 = "wpfafm"
+
+[ArmoryGroup4]
+
+[ArmoryGroup5]
+
+[ArmoryGroup6]
+
+[ArmoryGroup7]
+
+[steam]

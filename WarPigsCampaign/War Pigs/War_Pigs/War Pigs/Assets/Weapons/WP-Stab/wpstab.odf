@@ -1,0 +1,16 @@
+[GameObjectClass]
+baseName = "wpstab"
+classLabel = "apcannon"
+
+scrapCost = 10
+
+unitName = "WP-Stab"
+
+requireCount = 0
+//requireName1 = "wbfact"
+//requireText1 = "Build Factory"
+
+[PowerUpClass]
+
+[WeaponPowerupClass]
+weaponName = "gwpstab_c"

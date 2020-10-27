@@ -1,0 +1,11 @@
+[GameObjectClass]
+classLabel = "ibtrain"
+geometryName = "wbtrain00.fbx"
+
+buildSupport = "A"
+
+[BuildingClass]
+
+[PoweredBuildingClass]
+
+[BarracksClass]

@@ -1,0 +1,20 @@
+[GameObjectClass]
+baseName = "wpblst"
+classLabel = "apcannon"
+
+scrapCost = 20
+
+unitName = "WP-Blast"
+
+requireCount = 3
+requireName1 = "wbarmo"
+requireText1 = "Build Armory"
+requireName2 = "wbsbay"
+requireText2 = "Build Service Bay"
+requireName3 = "wbtcen"
+requireText3 = "Build Tech Center"
+
+[PowerUpClass]
+
+[WeaponPowerupClass]
+weaponName = "gwpblast_c"

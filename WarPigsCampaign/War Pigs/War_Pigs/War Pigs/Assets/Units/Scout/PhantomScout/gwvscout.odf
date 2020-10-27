@@ -1,0 +1,21 @@
+[WeaponClass]
+classLabel = "dispenser"
+altName = "gwvscout"
+wpnName = "Phantom"
+//"Sentinel"  
+//Launch 
+fireSound = "gflar00.wav"
+wpnReticle = "gflare"
+wpnCategory = "ROCK"
+localAmmo = 1080  
+addLocalAmmo = 5 
+aiRange = 400 
+isAssault = 0
+ 
+[dispenserClass]
+shotDelay = 120.0
+objectClass = "wvppscout"
+//objectClass = "ivscout"
+salvoCount = 3
+salvoDelay = 0.1
+//salvoDelay = 0.1
