@@ -5,7 +5,15 @@ animCount = 1
 animName1 = "deploy"
 animFile1 = "wvrecy00.fbx"
 
+/////// PROVIDES ///////////////////
+
+provideCount = 5
+provideName5 = "wvrecy"
+
+////////////////////////////////////
+
 [CraftClass]
+deployedMsg = "ivrecy08.wav"
 
 [TrackedVehicleClass]
 

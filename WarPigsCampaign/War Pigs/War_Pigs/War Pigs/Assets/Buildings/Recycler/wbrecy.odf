@@ -12,24 +12,22 @@ RunAnimIsLooped = true
 [BuildingClass]
 
 [FactoryClass]
+selectWaitMsg = "ivrecy04.wav"
+selectUser1Msg = "ivrecy02.wav"
+selectReadyMsg = "ivrecy04.wav"
+selectUser2Msg = "ivrecy10.wav"
+
 BeamColor = "177 0 0 31"
 BuildSparkConfig = "sparker_WarPigs"
 LineFinishColor = "255 255 255 0"
 LineStartColor = "177 0 0 255"
 lineSolidColor = "177 0 0 255"
+
 buildItem1 = "wvscav"
+buildItem2 = "wvscout"
+buildItem3 = "wvturr"
 buildItem5 = "wvcons"
 buildItem6 = "wvhserv"
 buildItem7 = "apserv"
-
-[BuildGroup2]
-buildLabel = "Scouts"
-buildItem1 = "wvscout"
-buildItem2 = "wvCscout"
-
-[BuildGroup3]
-buildLabel = "Turrets"
-buildItem1 = "wvturr"
-buildItem2 = "wvHturr
 
 [RecyclerClass]
