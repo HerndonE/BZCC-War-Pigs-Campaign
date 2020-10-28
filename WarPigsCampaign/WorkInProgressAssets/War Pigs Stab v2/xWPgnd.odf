@@ -1,0 +1,192 @@
+// ==================
+// WAR PIGS STAB CANNON GROUND HIT
+// ==================
+
+[ExplosionClass]
+classLabel = "explosion"
+
+explSound = "xbombf.wav"
+
+damageRadius = 0.0
+
+damageValue(N) = 0
+damageValue(L) = 0
+damageValue(H) = 0
+
+damageValue(S) = 0
+damageValue(D) = 0
+damageValue(A) = 0
+
+
+particleTypes = 9
+
+particleClass1 = "xWPgnd.ring"
+particleCount1 = 1
+particleVeloc1 = "0.0 0.0 0.0"
+
+particleClass2 = "xWPgnd.chunks"
+particleCount2 = 10
+particleVeloc2 = "15.0 7.5 15.0"
+particleBias2 = "0.0 5.0 0.0"
+
+particleClass3 = "xWPgnd.thrust"
+particleCount3 = 1
+particleVeloc3 = "0.0 0.0 0.0"
+
+particleClass4 = "xWPgnd.shock"
+particleCount4 = 1
+particleVeloc4 = "0.0 0.0 0.0"
+
+particleClass5 = "xWPgnd.cloud"
+particleCount5 = 1
+particleVeloc5 = "0.0 10.0 0.0"
+
+particleClass6 = "xWPgnd.flame"
+particleCount6 = 2
+particleVeloc6 = "0.0 10.0 0.0"
+
+particleClass7 = "xWPgnd.light"
+particleCount7 = 1
+particleVeloc7 = "0.0 0.0 0.0"
+
+particleClass8 = "xWPgnd.posroll"
+particleCount8 = 8
+particleVeloc8 = "5.0 0.0 5.0"
+
+particleClass9 = "xWPgnd.char"
+particleCount9 = 1
+particleVeloc9 = "0.0 0.0 0.0"
+
+
+[Ring]
+simulateBase = "sim_null"
+lifeTime = 10.0
+renderBase = "draw_planar"
+textureName = "grndchar.tga"
+textureBlend = "srcalpha invsrcalpha modulatealpha"
+startColor = "10 10 10 255"
+finishColor = "10 10 10 0"
+startRadius = 5.0
+finishRadius = 5.0
+animateTime = 10.0
+
+[Chunks]
+simulateBase = "sim_ember"
+lifeTime = 3.0
+renderBase = "draw_sprite"
+textureName = "dirt.tga"
+textureBlend = "srcalpha invsrcalpha modulatealpha"
+startColor = "0 200 0 255"
+finishColor = "0 0 0 0"
+startRadius = 0.3
+finishRadius = 0.3
+animateTime = 3.0
+
+[Thrust]
+simulateBase = "sim_null"
+lifeTime = 1.3
+renderBase = "draw_sprite"
+spriteCenter.x = 0.0
+spriteCenter.y = 1.0
+textureName = "ground.tga"
+textureBlend = "srcalpha invsrcalpha modulatealpha"
+startColor = "0 255 0 150"
+finishColor = "40 255 0 0"
+startRadius = 0.5
+finishRadius = 2.2
+animateTime = 1.3
+
+[Shock]
+simulateBase = "sim_null"
+lifeTime = 0.25
+renderBase = "draw_sphere"
+textureName = "vsmoke.tga"
+textureBlend = "one one modulate"
+startColor = "10 255 250 175"
+finishColor = "0 0 200 0"
+startRadius = 0.2
+finishRadius = 2.2
+animateTime = 0.25
+latitudeBands = 8
+longitudeSegments = 16
+
+[cloud]
+simulateBase = "sim_dust"
+lifeTime = .5
+renderBase = "draw_emit"
+emitName = "xWPgnd.cloudemit"
+emitDelay = 0.5
+emitVelocity = "0.0 1.0 0.0"
+emitVariance = "0.0 1.0 0.0"
+
+[cloudemit]
+simulateBase = "sim_smoke"
+lifeTime = 1.3
+renderBase = "draw_twirl"
+textureName = "smoke.tga"
+textureBlend = "srcalpha invsrcalpha modulatealpha"
+startColor = "50 110 50 255"
+finishColor = "100 100 100 0"
+startRadius = 1.0
+finishRadius = 2.0
+animateTime = 1.3
+
+[flame]
+simulateBase = "sim_smoke"
+lifeTime = 0.1
+renderBase = "draw_emit"
+emitName = "xWPgnd.flameemit"
+emitDelay = 0.1
+emitVelocity = "0.0 2.0 0.0"
+emitVariance = "0.0 0.0 0.0"
+
+[flameemit]
+simulateBase = "sim_smoke"
+lifeTime = 0.4
+renderBase = "draw_twirl"
+textureName = "fire.tga" // flame2
+textureBlend = "one one modulate"
+startColor = " 0 255 0 255"
+finishColor = "0 0 255 0"
+startRadius = 0.0
+finishRadius = 3.0
+animateTime = 0.4
+rotationRate = 5.0
+
+[Light]
+simulateBase = "sim_null"
+lifeTime = 0.6
+renderBase = "draw_light"
+startColor = "45 179 0 255"
+finishColor = "0 100 0 0"
+startRadius = 20.0
+finishRadius = 20.0
+animateTime = 0.6
+attenuateConstant = 0.0
+attenuateLinear = 1.0
+attenuateQuadratic = 0.0
+
+[posroll]
+simulateBase = "sim_dust"
+lifeTime = 2.0
+renderBase = "draw_twirl"
+textureName = "smoke.tga"
+textureBlend = "srcalpha invsrcalpha modulatealpha"
+startColor = "32 32 32 255"
+finishColor = "0 180 135 0"
+startRadius = 1.0
+finishRadius = 0.5
+animateTime = 2.0
+rotationRate = 2.0
+
+[char]
+simulateBase = "sim_null"
+lifeTime = 3.0
+renderBase = "draw_planar"
+textureName = "lightflare.tga"
+textureBlend = "one one modulate"
+startColor = "45 179 0 255"
+finishColor = "0 100 0 0"
+startRadius = 5.0
+finishRadius = 0.5
+animateTime = 3.0
