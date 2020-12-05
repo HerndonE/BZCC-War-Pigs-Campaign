@@ -1,0 +1,123 @@
+[GameObjectClass]
+baseName = "wvhscav"
+classLabel = "scavengerH"
+geometryName = "wvhscav00.fbx"
+animCount = 3
+animName1 = "forward"
+animFile1 = "wvhscavsf.fbx"
+animName2 = "neutral"
+animFile2 = "wvhscavsn.fbx"
+animName3 = "reverse"
+animFile3 = "wvhscavsr.fbx"
+cockpitName = "wvhscav_cockpit.fbx"
+scrapValue = 10
+scrapCost = 20
+buildTime = 10.0
+maxHealth = 2500
+maxAmmo = 2500
+unitName = "Hover Scavenger"
+aiName = "ScavHProcess"
+aiName2 = "ScavHProcess"
+heatSignature = 0.5
+imageSignature = 2.5
+radarSignature = 0.1
+isAssault = 1
+
+LightingType = 1
+
+explosionName = ""
+
+armorClass = H
+
+/////// REQUIREMENTS ///////////////
+requireCount = 0
+
+/////// PROVIDES ///////////////////
+provideCount = 1
+provideName1 = "wvhscav"
+
+////////////////////////////////////
+lightHard1 = "hp_light_1"
+lightName1 = "spotblue2" 
+LightsOnlyWhenPiloted = true
+
+//don't set an altitude for tracked vehicles
+effectHard1 = "hp_dust_1"
+effectName1 = "dusttrail3"
+effectMinVelocity1 = 5.0
+effectMaxVelocity1 = 500.0
+effectHard2 = "hp_dust_2"
+effectName2 = "dusttrail3"
+effectMinVelocity2 = 5.0
+effectMaxVelocity2 = 500.0
+
+
+[CraftClass]
+rangeScan = 600.0
+periodScan = 0.0
+velocJam = 0.0
+
+braccelFactor = 0.09
+velFactor =	0.3
+steerFactor = 1.5
+omegaFactor = 0.1
+
+TeamTransferrable = true
+selectOtherMsg = "ivscav01.wav"
+selectWaitMsg = "ivscav01.wav"
+selectGoMsg = "ivscav02.wav"
+selectFollowMsg = "ivscav03.wav"
+selectPickupMsg = "ivscav01.wav"
+selectDropoffMsg = "ivscav01.wav"
+otherMsg = "ivscav11.wav"
+goMsg = "ivscav04.wav"
+goObjectMsg = "ivscav13.wav"
+followMsg = "ivscav03.wav"
+followMeMsg = "ivscav07.wav"
+repairMsg = "ivscav08.wav"
+rescueMsg = "ivscav09.wav"
+recycleMsg = "ivscav10.wav"
+holdMsg = "ivscav04.wav"
+
+[HoverCraftClass]
+setAltitude = 0.0
+accelDragStop = 20.0
+accelDragFull = 1.0
+alphaTrack = 20.0
+alphaDamp = 5.0
+pitchPitch = 0.15
+pitchThrust = 0.05
+rollStrafe = 0.05
+rollSteer = 0.05
+
+velocForward = 25.0
+velocReverse = 15.0
+velocStrafe = 10.0
+accelThrust = 20.0
+accelBrake = 75.0
+omegaSpin = 3.5
+omegaTurn = 1.5
+alphaSteer = 5.0
+accelJump = 20.0
+
+soundThrust = "iengf.wav"
+soundTurbo = "avrckte1.wav"
+
+engineSound	= "iscav01.wav"
+treadSound = "iscav01b.wav"
+
+[DeployableClass]
+timeDeploy = 5.0
+timeUndeploy = 5.0
+soundThrust = "ieng01b.wav"
+soundTurbo = "avtanke3.wav"
+
+[ScavengerHClass]
+soundPickup = "suck.wav"
+scrapHold = 20
+deployClass = "wbscup"
+deployOffset = 0
+deployAtAltitude = -0.05
+
+
+

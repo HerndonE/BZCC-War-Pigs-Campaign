@@ -1,0 +1,26 @@
+[WeaponClass]
+classLabel = "cannon"
+ordName = "WPCan"
+wpnName = "WP-Stab"
+fireSound = "gmagg02.wav"
+wpnReticle = "gatstab"
+wpnCategory = "CANN"
+isAssault = 0
+flashName = "gWPCan.flash"
+aiRange = 100
+
+[CannonClass]
+shotDelay = 0.5 // 2/sec
+shotAlternate = 0
+
+
+[Flash]
+renderBase = "draw_geom"
+textureName = "sflash.tga"
+textureBlend = "one one modulate"
+startColor = "45 179 0 255"
+finishColor = "64 255 0 255"
+startRadius = 15.0
+finishRadius = 1
+animateTime = 0.1
+geomName = "g_sflash.xsi"
