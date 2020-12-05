@@ -3,7 +3,16 @@ classLabel = "ivatank"
 geometryName = "wvatnk00.fbx"
 cockpitName = "wvatnk_cockpit.fbx"
 explosionName = "wWPHWxpl"
+
+AlwaysShowAmmo = true
+
 [CraftClass]
+ClosestEnemyGoodEyes = true
+SitAttackAllowIndependence = true
+SitAttackAllowCounterattack = true 
+ejectRatio = 1
+LightsOnlyWhenPiloted = true
+GotoTaskHasLeader = false
 
 [TrackedVehicleClass]
 
